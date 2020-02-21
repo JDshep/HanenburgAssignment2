@@ -6,13 +6,13 @@ public class User {
 	private String name;
 
 	public boolean verify;
-	
+
 	public User() {
 		this.username = "";
 		this.password = "";
 		this.name = "";
 	}
-	
+
 	public User(String username, String password, String name) {
 		this.username = username;
 		this.password = password;

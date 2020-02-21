@@ -16,13 +16,13 @@ public class HanenburgAssignment2 {
 		String[] readLine = new String[3];
 		User[] users = new User[4];
 
+		// Read file
 		BufferedReader fileReader = null;
 		try {
 			fileReader = new BufferedReader(new FileReader("data.txt"));
 			for (int i = 0; i < 4; i++) {
 				readLine = fileReader.readLine().split(",");
-				users[i]= new User(readLine[0],readLine[1],readLine[2]);
-
+				users[i] = new User(readLine[0], readLine[1], readLine[2]);
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("Oops, the file wasn't found");
@@ -39,6 +39,7 @@ public class HanenburgAssignment2 {
 			}
 		}
 
+		// user entry and verification
 		for (int i = 0; i < 5; i++) {
 			System.out.println("Please enter a Username");
 			username = Scanner.next();
@@ -59,6 +60,8 @@ public class HanenburgAssignment2 {
 				break;
 			}
 		}
+
+		// finishing up
 		Scanner.close();
 		if (!access) {
 			System.out.println("Too many failed login attempts, you are now locked out.");
