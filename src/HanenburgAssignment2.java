@@ -11,7 +11,7 @@ public class HanenburgAssignment2 {
 		Scanner Scanner = new Scanner(System.in);
 		String username;
 		String password;
-		String name = "Welcome";
+		String name = "Welcome ";
 		boolean access = false;
 		String[] readLine = new String[3];
 		User[] users = new User[4];
@@ -49,7 +49,7 @@ public class HanenburgAssignment2 {
 
 			for (int j = 0; j < 4; j++) {
 				if (users[j].verify(username, password)) {
-					name = "Welcome " + users[j].getName();
+					name = name + users[j].getName();
 					access = true;
 					break;
 				}
